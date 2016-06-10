@@ -87,9 +87,9 @@ gulp.task('git-commit', ['git-add'], function(){
   var argv = require('yargs').default({ m : "Pequenos ajustes." }).argv;
   var msg = argv.m;
   return gulp.src('./')
-    .pipe(git.commit(msg)).on("error", function(){
+    .pipe(git.commit(msg).on("error", function(){
       gutil.log("bananas");
-    });
+    }));
 });
 
 //comando para git-push
