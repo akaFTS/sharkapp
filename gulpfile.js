@@ -10,7 +10,6 @@ var wiredep = require('wiredep').stream;
 var inject = require('gulp-inject');
 var q = require("q");
 var git = require('gulp-git');
-var argv = require('yargs').argv;
 
 var paths = {
   sass: ['./scss/**/*.scss']
@@ -85,8 +84,10 @@ gulp.task('git-add', function(){
 
 //comando para git commit, recebe msg na command-line
 gulp.task('git-commit', ['git-add'], function(){
+  var argv = require('yargs').default({ m : "Pequenos ajustes." }).argv;
+  var msg = argv.m;
   return gulp.src('./')
-    .pipe(git.commit("blah"));
+    .pipe(git.commit(msg));
 });
 
 //comando para git-push
