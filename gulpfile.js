@@ -9,7 +9,8 @@ var sh = require('shelljs');
 var wiredep = require('wiredep').stream;
 var inject = require('gulp-inject');
 var q = require("q");
-
+var git = require('gulp-git');
+var argv = require('yargs').argv;
 
 var paths = {
   sass: ['./scss/**/*.scss']
@@ -75,3 +76,38 @@ gulp.task('inject', function() {
 
 //alias pra chamar ambos os injects
 gulp.task('index', ['wiredep', 'inject']);
+
+//comando para git add .
+gulp.task('git-add', function(){
+  return gulp.src('./')
+    .pipe(git.add());
+});
+
+//comando para git commit, recebe msg na command-line
+gulp.task('git-commit', ['git-add'], function(){
+  return gulp.src('./')
+    .pipe(git.commit("blah"));
+});
+
+//comando para git-push
+gulp.task('git-push', ['git-commit'], function(){
+  git.push('origin', 'master', function (err) {
+    if (err) throw err;
+  });
+});
+
+//sobe pro servidor do ionic
+gulp.task('ionic-upload', function(){
+  var deferred = q.defer();
+  sh.exec("ionic upload", {}, function(code, stdout){
+    gutil.log(gutil.colors.magenta("ionic-upload"), stdout);
+    deferred.resolve();
+  });
+
+  return deferred.promise;
+});
+
+//sobe no git e no ionic
+gulp.task('sync', ['git-push', 'ionic-upload'], function(){
+
+});
