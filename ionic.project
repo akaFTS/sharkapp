@@ -1,4 +1,19 @@
 {
   "name": "SharkApp",
-  "app_id": "ffbf16a7"
+  "app_id": "ffbf16a7",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ],
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }
