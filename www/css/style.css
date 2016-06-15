@@ -1,1 +1,54 @@
 /* Empty. Add your own CSS if you like */
+
+/* CORES */
+
+.purple {
+    color: #5e35b1;
+}
+
+.green {
+    color: #2E7D32;
+}
+
+.blue {
+    color: #3F51B5;
+}
+
+.orange {
+    color: #FF5722;
+}
+
+.red {
+    color: #D32F2F;
+}
+
+.cyan {
+    color: #0097A7;
+}
+
+ion-content{
+    background-color: #F5F5F5;
+}
+
+
+
+/* SIDEMENU */
+
+.bar.bar-super-royal {
+    background-color: #4527A0;
+}
+
+ion-side-menu ion-content {
+    background-color: #c1c1c1;
+}
+
+ion-side-menu ion-item a.item-content{
+    background-color: #e9e9e9 !important;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+ion-side-menu ion-item.item-icon-left .icon{
+    font-size: 20px;
+}
+

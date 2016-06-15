@@ -21,9 +21,7 @@
 }
 
 /* Intro */
-.scroll-content {
-  background-color: #159CEE;
-}
+
 p.intro {
   font-size: 1.5em;
   line-height: 1.4em;
@@ -186,7 +184,4 @@ p.intro {
 /* change margin between slider icon*/
 .slider-pager .slider-pager-page {
   margin: 0px !important;
-}
-.first .slider-pager {
-  display: block;
 }

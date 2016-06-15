@@ -69,7 +69,8 @@ gulp.task('wiredep', function() {
 //injeta arquivos nossos no index.html
 gulp.task('inject', function() {
     gulp.src("./www/index.html")
-        .pipe(inject(gulp.src(["./www/css/*.css", "./www/js/*.js"], {read: false})))
+        .pipe(inject(gulp.src(["./www/css/*.css", "!./www/css/ionic.app.min.css", "./www/js/*.js"], 
+          {read: false}), {relative: true}))
         .pipe(gulp.dest('./www'));
 });
 
@@ -87,9 +88,7 @@ gulp.task('git-commit', ['git-add'], function(){
   var argv = require('yargs').default({ m : "Pequenos ajustes." }).argv;
   var msg = argv.m;
   return gulp.src('./')
-    .pipe(git.commit(msg).on("error", function(){
-      gutil.log("bananas");
-    }));
+    .pipe(git.commit(msg));
 });
 
 //comando para git-push
