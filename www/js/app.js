@@ -1,6 +1,6 @@
 var app = angular.module('sharkapp', ['ionic', 'sharkapp.controllers']);
 
-app.run(function($ionicPlatform) {
+app.run(function($ionicPlatform, $state, $rootScope) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -13,7 +13,50 @@ app.run(function($ionicPlatform) {
             // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
         }
+
+
+        //mecanismo de trocar cor a cada troca de seção
+        $rootScope.oldcolor = "purple";
+        $rootScope.changeTheme = function(newcolor) {
+
+            //primeiro, trocamos a cor do header
+            var header = document.getElementById('mainHeader').getElementsByTagName("ion-header-bar");
+            var headerOldClass = "bar-" + $rootScope.oldcolor;
+            var headerNewClass = "bar-" + newcolor;
+            $rootScope.oldcolor = newcolor;
+            var el;
+
+            for (var i = 0; i < header.length; i++) {
+                el = angular.element(header[i]);
+                if (el.hasClass(headerOldClass)) {
+                    el.removeClass(headerOldClass);
+                }
+                el.addClass(headerNewClass);
+            }
+
+            //agora, adicionamos a flag da cor no conteudo
+            var content = document.getElementById('mainContent').getElementsByTagName("ion-content");
+            var contentOldClass = "cnt-" + $rootScope.oldcolor;
+            var contentNewClass = "cnt-" + newcolor;
+
+            for (var i = 0; i < content.length; i++) {
+                el = angular.element(content[i]);
+                if (el.hasClass(contentOldClass)) {
+                    el.removeClass(contentOldClass);
+                }
+                el.addClass(contentNewClass);
+            }
+
+        }
+
+        //gerenciar cores do app
+        $rootScope.$on('$stateChangeSuccess', function(evt, toState) {
+            $rootScope.changeTheme(toState.color);
+        });
+
     });
+
+
 })
 
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -38,7 +81,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
             'menuContent': {
                 templateUrl: 'templates/dash.html'
             }
-        }
+        },
+        color: "purple"
     });
 
     $stateProvider.state('app.topics', {
@@ -47,7 +91,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
             'menuContent': {
                 templateUrl: 'templates/topics.html'
             }
-        }
+        },
+        color: "blue"
     });
 
     $stateProvider.state('app.exers', {
@@ -57,7 +102,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 templateUrl: 'templates/exers.html',
                 controller: 'PlaylistsCtrl'
             }
-        }
+        },
+        color: "red"
     });
 
     $stateProvider.state('app.forum', {
@@ -67,7 +113,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 templateUrl: 'templates/forum.html',
                 controller: 'PlaylistsCtrl'
             }
-        }
+        },
+        color: "orange"
     });
 
     $stateProvider.state('app.stats', {
@@ -77,7 +124,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 templateUrl: 'templates/stats.html',
                 controller: 'PlaylistsCtrl'
             }
-        }
+        },
+        color: "green"
     });
 
     $stateProvider.state('app.community', {
@@ -87,9 +135,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 templateUrl: 'templates/community.html',
                 controller: 'PlaylistsCtrl'
             }
-        }
+        },
+        color: "cyan"
     });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/dash');
+    $urlRouterProvider.otherwise('/app/stats');
 });

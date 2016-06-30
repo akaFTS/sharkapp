@@ -32,10 +32,35 @@ ion-content{
 
 
 
-/* SIDEMENU */
+/* SIDEMENU e HEADER */
 
 .bar.bar-super-royal {
     background-color: #4527A0;
+}
+
+.bar.bar-green {
+    background-color: #225d25 !important;
+    border-color: #1d5020 !important;
+}
+
+.bar.bar-blue {
+    background-color: #3F51B5 !important;
+    border-color: #2f3c87 !important;
+}
+
+.bar.bar-orange {
+    background-color: #e15a05 !important;
+    border-color: #c95004 !important;
+}
+
+.bar.bar-red {
+    background-color: #ca140a !important;
+    border-color: #af1109 !important;
+}
+
+.bar.bar-cyan {
+    background-color: #2597a1 !important;
+    border-color: #228b94 !important;
 }
 
 ion-side-menu ion-content {
@@ -45,7 +70,7 @@ ion-side-menu ion-content {
 ion-side-menu ion-item a.item-content{
     background-color: #e9e9e9 !important;
     font-family: "Roboto";
-    font-weight: bold;
+    font-weight: 300;
 }
 
 ion-side-menu ion-item.item-icon-left .icon{
