@@ -1,5 +1,3 @@
-/* Empty. Add your own CSS if you like */
-
 /* CORES */
 
 .purple {
@@ -24,6 +22,42 @@
 
 .cyan {
     color: #0097A7;
+}
+
+.yellow {
+    color: #FDD835;
+}
+
+.purple-back {
+    background-color: #5e35b1;
+}
+
+.green-back {
+    background-color: #2E7D32;
+}
+
+.blue-back {
+    background-color: #3F51B5;
+}
+
+.orange-back {
+    background-color: #FF5722;
+}
+
+.red-back {
+    background-color: #D32F2F;
+}
+
+.cyan-back {
+    background-color: #0097A7;
+}
+
+.gray-back {
+    background-color: #AAA;
+}
+
+.yellow-back {
+    background-color: #FDD835;
 }
 
 ion-content{
@@ -99,5 +133,198 @@ ion-side-menu ion-item.header-item p{
     margin-top: 10px;
     font-size: 16px;
     color: #4527A0;
+}
+
+/* EXERCICIOS */
+
+section.horizontal-sec {
+    background-color: #ddd;
+}
+
+section.horizontal-sec p.sec-title {
+    text-transform: uppercase;
+    font-family: "Roboto Condensed";
+    color: #444;
+    font-size: 16px;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+
+section.horizontal-sec .sec-inner-balls {
+    width: -webkit-max-content;
+    width: max-content;
+}
+
+section.horizontal-sec .sec-inner-balls .sec-item {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "Roboto Condensed";
+    color: #555;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    max-width: 150px;
+    min-width: 100px;
+    vertical-align: top;
+}
+
+section.horizontal-sec .sec-inner-balls .sec-item .sec-item-ball {
+    color: #EEE;
+    text-align: center;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    font-size: 36px;
+    position: relative;
+}
+
+section.horizontal-sec .sec-inner-balls .sec-item .sec-item-ball span {
+    position: relative;
+    top: calc(50% - 18px);
+}
+
+section.breath-area {
+    height: 70px;
+}
+
+section.main-sec .sec-title {
+    text-transform: uppercase;
+    font-family: "Roboto Condensed";
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 12px;
+    margin: 0;
+}
+
+section.main-sec hr {
+    border: 0;
+    height: 1px;
+    margin: 0px;
+    background-color: #DDD;
+    padding-top: 0;
+}
+
+section.main-sec ion-list.main-list {
+
+}
+
+section.main-sec ion-list.main-list ion-item:first-child {
+    border-top: 0;
+}
+
+section.main-sec ion-item.double-item {
+    padding: 0;
+    background-color: #F5F5F5;
+}
+
+section.main-sec ion-item.double-item .double-wrapper{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+
+}
+
+section.main-sec ion-item.double-item .item-badge {
+    flex: 0 0 72px;
+    padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+section.main-sec ion-item.double-item .item-badge .item-ball {
+    color: #EEE;
+    text-align: center;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+section.main-sec ion-item.double-item .item-inside {
+    padding: 10px;
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+section.main-sec ion-item.double-item .item-inside h1{
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: normal;
+    color: #555;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+section.main-sec ion-item.double-item p.small{
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-family: "Roboto";
+    text-align: center;
+    color: #555;
+}
+
+.progressbar{
+    width: 100%;
+    height: 17px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    padding: 1px;
+}
+.progressbar-inside{
+    height: 100%;
+    border-radius: 4px;
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+}
+
+p.progress-indicator{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/*.cnt-red section.horizontal-sec p.sec-title, 
+.cnt-red section.main-sec .sec-title, 
+.cnt-red section.main-sec .colorful {
+    color: #D32F2F !important;
+}
+*/
+.cnt-red section.main-sec ion-item.double-item .item-badge .item-ball,
+.cnt-red section.horizontal-sec .sec-inner-balls .sec-item .sec-item-ball {
+    background-color: #D32F2F !important;
 }
 
