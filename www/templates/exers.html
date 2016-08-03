@@ -1,160 +1,160 @@
 <ion-view view-title="Exercícios">
-  <ion-content>
-    <section class="horizontal-sec">
-        <p class="sec-title">Listas Recomendadas</p>
-        <ion-scroll direction="x" style="">
-            <div class="sec-inner-balls">
-                <div class="sec-item">
-                    <div class="sec-item-ball">
-                        <span class="fa fa-gear"></span>
-                    </div>
-                    <div class="sec-item-title">
-                        <p>Fuvest</p>
-                    </div>
-                </div>
-                <div class="sec-item">
-                    <div class="sec-item-ball">
-                        <span class="fa fa-bank"></span>
-                    </div>
-                    <div class="sec-item-title">
-                        <p>Lista de História</p>
-                    </div>
-                </div>
-                <div class="sec-item">
-                    <div class="sec-item-ball">
-                        <span class="fa fa-rocket"></span>
-                    </div>
-                    <div class="sec-item-title">
-                        Preparação Vestibular
-                    </div>
-                </div>
-                <div class="sec-item">
-                    <div class="sec-item-ball">
-                        <span class="fa fa-question-circle"></span>
-                    </div>
-                    <div class="sec-item-title">
-                        <p>Preciso Treinar</p>
-                    </div>
-                </div>
-                <div class="sec-item">
-                    <div class="sec-item-ball">
-                        <span class="fa fa-star"></span>
-                    </div>
-                    <div class="sec-item-title">
-                        Segunda Fase
-                    </div>
-                </div>
-                <div class="sec-item">
-                    <div class="sec-item-ball">
-                        <span class="fa fa-calculator"></span>
-                    </div>
-                    <div class="sec-item-title">
-                        <p>Exatas</p>
-                    </div>
-                </div>
-            </div>
-        </ion-scroll>
-    </section>
-    <section class="main-sec">
-        <h1 class="sec-title">Minhas Listas</h1>
-        <hr>
-        <ion-list class="main-list">
-            <ion-item class="double-item">
-                <div class="double-wrapper">
-                    <div class="item-badge">
-                        <div class="item-ball">
-                            <span class="fa fa-question-circle"></span>
+    <ion-content>
+        <section class="horizontal-sec">
+            <p class="sec-title">Listas Recomendadas</p>
+            <ion-scroll direction="x" style="">
+                <div class="sec-inner-balls">
+                    <div class="sec-item" ng-click="seeDetail()">
+                        <div class="sec-item-ball">
+                            <span class="fa fa-fw fa-gear"></span>
+                        </div>
+                        <div class="sec-item-title">
+                            <p>Fuvest</p>
                         </div>
                     </div>
-                    <div class="item-inside">
-                        <h1>Lista para Fuvest</h1>
+                    <div class="sec-item">
+                        <div class="sec-item-ball">
+                            <span class="fa fa-fw fa-bank"></span>
+                        </div>
+                        <div class="sec-item-title">
+                            <p>Lista de História</p>
+                        </div>
+                    </div>
+                    <div class="sec-item">
+                        <div class="sec-item-ball">
+                            <span class="fa fa-fw fa-rocket"></span>
+                        </div>
+                        <div class="sec-item-title">
+                            Preparação Vestibular
+                        </div>
+                    </div>
+                    <div class="sec-item">
+                        <div class="sec-item-ball">
+                            <span class="fa fa-fw fa-question-circle"></span>
+                        </div>
+                        <div class="sec-item-title">
+                            <p>Preciso Treinar</p>
+                        </div>
+                    </div>
+                    <div class="sec-item">
+                        <div class="sec-item-ball">
+                            <span class="fa fa-fw fa-star"></span>
+                        </div>
+                        <div class="sec-item-title">
+                            Segunda Fase
+                        </div>
+                    </div>
+                    <div class="sec-item">
+                        <div class="sec-item-ball">
+                            <span class="fa fa-fw fa-calculator"></span>
+                        </div>
+                        <div class="sec-item-title">
+                            <p>Exatas</p>
+                        </div>
                     </div>
                 </div>
-            </ion-item>
-            <ion-item class="double-item">
-                <div class="double-wrapper">
-                    <div class="item-badge">
-                        <div class="item-ball">
-                            <span class="fa fa-calculator"></span>
+            </ion-scroll>
+        </section>
+        <section class="main-sec">
+            <h1 class="sec-title">Minhas Listas</h1>
+            <hr>
+            <ion-list class="main-list">
+                <ion-item class="double-item" ng-click="seeDetail()">
+                    <div class="double-wrapper">
+                        <div class="item-badge">
+                            <div class="item-ball red-back">
+                                <span class="fa fa-fw fa-question-circle"></span>
+                            </div>
+                        </div>
+                        <div class="item-inside">
+                            <h1>Lista para Fuvest</h1>
                         </div>
                     </div>
-                    <div class="item-inside">
-                        <h1>Treinar Matemática</h1>
-                    </div>
-                </div>
-            </ion-item>
-            <ion-item class="double-item">
-                <div class="double-wrapper">
-                    <div class="item-badge">
-                        <div class="item-ball">
-                            <span class="fa fa-plus"></span>
+                </ion-item>
+                <ion-item class="double-item">
+                    <div class="double-wrapper">
+                        <div class="item-badge">
+                            <div class="item-ball red-back">
+                                <span class="fa fa-fw fa-calculator"></span>
+                            </div>
+                        </div>
+                        <div class="item-inside">
+                            <h1>Treinar Matemática</h1>
                         </div>
                     </div>
-                    <div class="item-inside">
-                        <h1 class="colorful">Criar nova...</h1>
-                    </div>
-                </div>
-            </ion-item>
-        </ion-list>
-    </section>
-    <section class="breath-area">
-    </section>
-    <section class="main-sec">
-        <h1 class="sec-title">Últimos resultados</h1>
-        <hr>
-        <ion-list class="main-list">
-            <ion-item class="double-item">
-                <div class="double-wrapper">
-                    <div class="item-badge">
-                        <div class="item-ball">
-                            <span class="fa fa-calculator"></span>
+                </ion-item>
+                <ion-item class="double-item">
+                    <div class="double-wrapper">
+                        <div class="item-badge">
+                            <div class="item-ball red-back">
+                                <span class="fa fa-fw fa-plus"></span>
+                            </div>
                         </div>
-                        <p class="small colorful">Ontem</p>
-                    </div>
-                    <div class="item-inside">
-                        <h1>Treinar Matemática</h1>
-                        <div class="progressbar">
-                            <div class="progressbar-inside yellow-back" ng-style="{'width': '55%'}"></div>
+                        <div class="item-inside">
+                            <h1 class="colorful">Criar nova...</h1>
                         </div>
-                        <p class="progress-indicator">55/100</p>
                     </div>
-                </div>
-            </ion-item>
-            <ion-item class="double-item">
-                <div class="double-wrapper">
-                    <div class="item-badge">
-                        <div class="item-ball">
-                            <span class="fa fa-calculator"></span>
+                </ion-item>
+            </ion-list>
+        </section>
+        <section class="breath-area">
+        </section>
+        <section class="main-sec">
+            <h1 class="sec-title">Últimos resultados</h1>
+            <hr>
+            <ion-list class="main-list">
+                <ion-item class="double-item">
+                    <div class="double-wrapper">
+                        <div class="item-badge">
+                            <div class="item-ball red-back">
+                                <span class="fa fa-fw fa-calculator"></span>
+                            </div>
+                            <p class="small colorful">Ontem</p>
                         </div>
-                        <p class="small colorful">20/06</p>
-                    </div>
-                    <div class="item-inside">
-                        <h1>Treinar Matemática</h1>
-                        <div class="progressbar">
-                            <div class="progressbar-inside green-back" ng-style="{'width': '75%'}"></div>
+                        <div class="item-inside">
+                            <h1>Treinar Matemática</h1>
+                            <div class="progressbar">
+                                <div class="progressbar-inside yellow-back" ng-style="{'width': '55%'}"></div>
+                            </div>
+                            <p class="progress-indicator">55%</p>
                         </div>
-                        <p class="progress-indicator">75/100</p>
                     </div>
-                </div>
-            </ion-item>
-            <ion-item class="double-item">
-                <div class="double-wrapper">
-                    <div class="item-badge">
-                        <div class="item-ball">
-                            <span class="fa fa-star"></span>
+                </ion-item>
+                <ion-item class="double-item">
+                    <div class="double-wrapper">
+                        <div class="item-badge">
+                            <div class="item-ball red-back">
+                                <span class="fa fa-fw fa-calculator"></span>
+                            </div>
+                            <p class="small colorful">20/06</p>
                         </div>
-                        <p class="small colorful">15/06</p>
-                    </div>
-                    <div class="item-inside">
-                        <h1>Segunda Fase</h1>
-                        <div class="progressbar">
-                            <div class="progressbar-inside yellow-back" ng-style="{'width': '50%'}"></div>
+                        <div class="item-inside">
+                            <h1>Treinar Matemática</h1>
+                            <div class="progressbar">
+                                <div class="progressbar-inside green-back" ng-style="{'width': '75%'}"></div>
+                            </div>
+                            <p class="progress-indicator">75%</p>
                         </div>
-                        <p class="progress-indicator">50/100</p>
                     </div>
-                </div>
-            </ion-item>
-        </ion-list>
-    </section>
-  </ion-content>
+                </ion-item>
+                <ion-item class="double-item">
+                    <div class="double-wrapper">
+                        <div class="item-badge">
+                            <div class="item-ball red-back">
+                                <span class="fa fa-fw fa-star"></span>
+                            </div>
+                            <p class="small colorful">15/06</p>
+                        </div>
+                        <div class="item-inside">
+                            <h1>Segunda Fase</h1>
+                            <div class="progressbar">
+                                <div class="progressbar-inside yellow-back" ng-style="{'width': '50%'}"></div>
+                            </div>
+                            <p class="progress-indicator">50%</p>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </section>
+    </ion-content>
 </ion-view>

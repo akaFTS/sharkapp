@@ -1,4 +1,4 @@
-var app = angular.module('sharkapp', ['ionic', 'sharkapp.controllers']);
+var app = angular.module('sharkapp', ['ionic', 'sharkapp.controllers', 'chart.js']);
 
 app.run(function($ionicPlatform, $state, $rootScope) {
     $ionicPlatform.ready(function() {
@@ -100,7 +100,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
         views: {
             'menuContent': {
                 templateUrl: 'templates/exers.html',
-                controller: 'PlaylistsCtrl'
+                controller: 'ExersCtrl'
+            }
+        },
+        color: "red"
+    });
+
+    $stateProvider.state('app.exers-detail', {
+        url: '/exers-detail',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/exers-detail.html',
+                controller: 'ExersDetailCtrl'
             }
         },
         color: "red"

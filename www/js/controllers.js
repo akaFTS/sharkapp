@@ -52,15 +52,20 @@ app.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
     };
 })
 
-app.controller('PlaylistsCtrl', function($scope) {
-    $scope.playlists = [
-        { title: 'SHARKAO', id: 1 },
-        { title: 'by Bambam & Felipe Franco', id: 2 },
-        { title: 'Dubstep', id: 3 },
-        { title: 'Indie', id: 4 },
-        { title: 'Rap', id: 5 },
-        { title: 'Cowbell', id: 6 }
+app.controller('ExersCtrl', function($scope, $state) {
+    $scope.seeDetail = function() {
+        $state.go("app.exers-detail");
+    }
+})
+
+app.controller('ExersDetailCtrl', function($scope) {
+    $scope.linedata = [
+        [35, 76, 90, 44, 60, 75, 90],
     ];
+    $scope.linecolor = ['#D32F2F'];
+    $scope.linelabels = ["Jan", "Feb", "Mar", "Apr"];
+
+    $scope.chartwidth = 500;
 })
 
 app.controller('PlaylistCtrl', function($scope, $stateParams) {});

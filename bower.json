@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "ngstorage": "^0.3.10",
-    "font-awesome": "fontawesome#^4.6.3"
+    "font-awesome": "fontawesome#^4.6.3",
+    "Chart.js": "^2.1.6",
+    "angular-chart.js": "^0.10.2"
   }
 }
